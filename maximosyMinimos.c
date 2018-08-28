@@ -9,7 +9,7 @@
         do{
             system("cls");
             printf("numero:");
-            scanf("%d", &nro);
+            scanf("%d", &nro);//recibe dos parametros//
            /* if (flag==0){
                 min=nro;
                 max=nro;
