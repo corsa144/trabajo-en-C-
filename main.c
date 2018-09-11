@@ -1,32 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 int main()
 {
-    int nro1,nro2,nro3,dato;
-    printf("ingrese:");
-    scanf("%d",&nro1);
-    printf("/n ingrese:");
-    scanf("%d",&nro2);
-    printf("/n ingrese:");
-    scanf("%d",&nro3);
+    char buffer[64];
+    int cantidad;
 
-    if (nro1>nro2&&nro3)
-    {
-        dato=nro1;
-        printf("el valor mayor es:%d", dato);
+    printf("nombre: ");
 
-    }else if (nro2>nro3&&nro1)
-    {
-        dato=nro2;
-        printf("el valor mayor es:%d",dato);
+    fgets(buffer,sizeof(buffer)-2,stdin);
+    //fgets(buffer,62,stdin);
 
-    }else if(nro3>nro1&&nro2)
-    {
-        dato=nro3;
-        printf("el valor mayor es:%d",dato);
+    cantidad = strlen(buffer);
 
-    }
+    buffer[cantidad-1] = '\0';
+
+    printf("%s", buffer);
 
     return 0;
 }
